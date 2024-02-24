@@ -1,0 +1,12 @@
+<div class="grid-container" *ngIf="food">
+    <app-food-form 
+        buttonText="Update Food"
+        titleText="Edit Food"
+        [currentFood]="food"
+        (onSubmit)="onSubmit($event)">
+    </app-food-form>
+</div>
+
+<div class="grid-container" *ngIf="!food">
+    <mat-spinner></mat-spinner>
+</div>
